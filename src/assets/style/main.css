@@ -1,0 +1,10 @@
+@import '/node_modules/@picocss/pico/css/pico.css';
+/* @import '/node_modules/@picocss/pico/css/pico.slate.css'; */
+@import '/node_modules/@picocss/pico/css/pico.sand.css';
+
+:root {
+}
+
+h1 {
+  text-align: center;
+}
