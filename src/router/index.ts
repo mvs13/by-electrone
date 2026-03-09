@@ -20,13 +20,13 @@ const router = createRouter({
         {
           path: 'people',
           name: 'list-people',
-          component: () => import('../pages/FooPage.vue'),
+          component: () => import('../pages/PeoplePage.vue'),
           meta: { parent: 'list', title: 'People' },
         },
         {
           path: 'planets',
           name: 'list-planets',
-          component: () => import('../pages/FooPage.vue'),
+          component: () => import('../pages/PlanetsPage.vue'),
           meta: { parent: 'list', title: 'Planets' },
         },
       ],
