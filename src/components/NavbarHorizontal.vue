@@ -1,7 +1,11 @@
 <template>
   <nav>
     <ul>
-      <li><strong>SWAPI</strong></li>
+      <li>
+        <RouterLink to="/">
+          <strong>SWAPI</strong>
+        </RouterLink>
+      </li>
     </ul>
     <ul>
       <li v-for="item in navRoutes" v-bind:key="item.route">
