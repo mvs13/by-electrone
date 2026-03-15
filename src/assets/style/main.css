@@ -1,8 +1,10 @@
-@import '/node_modules/@picocss/pico/css/pico.css';
-/* @import '/node_modules/@picocss/pico/css/pico.slate.css'; */
-@import '/node_modules/@picocss/pico/css/pico.sand.css';
+@import '@picocss/pico/css/pico.css';
+@import '@picocss/pico/css/pico.slate.css';
+/* @import '@picocss/pico/css/pico.sand.css'; */
 
-:root {
+body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 h1 {

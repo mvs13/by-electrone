@@ -1,21 +1,24 @@
 {
-  "name": "use-swapi-init",
-  "version": "0.0.0",
+  "name": "use-swapi-graphql",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
+  "main": "dist-electron/main.js",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
+    "build-electron": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/",
     "codegen": "graphql-codegen",
-    "codegen:watch": "graphql-codegen -w"
+    "codegen:watch": "graphql-codegen -w",
+    "electron:build": "bun run build && electron-builder"
   },
   "dependencies": {
     "@apollo/client": "^3.13.8",
@@ -39,6 +42,8 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
+    "electron": "^41.0.2",
+    "electron-builder": "^26.8.1",
     "eslint": "^9.39.2",
     "eslint-plugin-vue": "~10.6.2",
     "jiti": "^2.6.1",
@@ -46,7 +51,29 @@
     "prettier": "3.7.4",
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6",
     "vite-plugin-vue-devtools": "^8.0.5",
     "vue-tsc": "^3.2.2"
+  },
+  "build":{
+    "appId": "otus.use-swapi-graphql.electron",
+    "productName": "use-swapi-graphql",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NavbarHorizontal from './components/NavbarHorizontal.vue'
+import NavbarHorizontal from '@/components/NavbarHorizontal.vue'
 </script>
 
 <template>
