@@ -2,11 +2,6 @@
 @import '@picocss/pico/css/pico.slate.css';
 /* @import '@picocss/pico/css/pico.sand.css'; */
 
-body {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-}
-
 h1 {
   text-align: center;
 }
